@@ -19,7 +19,6 @@ import json
 from threading import Thread
 from rich.console import Console
 
-# Note: Ensure 'ethan' and 'asmix' are installed in your environment
 try:
     import ethan
     from asmix import Instagram
@@ -29,39 +28,23 @@ except ImportError:
 Con = Console()
 Ex = 0
 
-#=============================#
 hits = 0
 bads_instagram = 0
 bads_email = 0
 p1 = 0
-#=============================#
 
-# ANSI Color Codes
-Z = '\033[1;31m'   # Red
+Z = '\033[1;31m'
 b = random.randint(5, 208)
 bo = f'\x1b[38;5;{b}m'
-Z1 = '\033[2;31m'  # Dark Red
-F = '\033[2;32m'   # Green
-A = '\033[2;34m'   # Blue
-C = '\033[1;97m'   # White
-J = '\033[2;36m'   # Cyan
-Y = '\033[1;34m'   # Light Blue
-X = '\033[1;33m'   # Yellow
-M = '\x1b[1;37m'   # White
-S = '\033[1;33m'   # Yellow
-R = '\033[1;31m'   # Red
-C1 = '\033[2;35m'  # Pink
-H = '\x1b[38;5;208m' # Orange
-ED = '\x1b[38;5;208m'# Orange
-Bl = '\033[1;34m'  # Blue
-P = '\033[1;35m'   # Purple
-G = '\033[1;32m'   # Green
-N = '\033[1;37m'   # White
-
-#=============================#
+R = '\033[1;31m'
+Y = '\033[1;34m'
+M = '\x1b[1;37m'
+ED = '\x1b[38;5;208m'
+P = '\033[1;35m'
+G = '\033[1;32m'
+N = '\033[1;37m'
 
 def banner():
-    os.system('cls' if os.name == 'nt' else 'clear')
     logo = render('{WARRIOR}', colors=['red', 'white'], align='center')
     print(logo)
     print(f'''{R}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 
@@ -75,7 +58,6 @@ def banner():
 
 banner()
 
-# تم وضع الأيدي والتوكن الخاص بك هنا مباشرة مسبقاً
 ID = "8368093591"
 token = "8781335363:AAHquFRhQNYeXdKrVONEHq0PmMAfLX2JAjc"
 
@@ -83,14 +65,11 @@ print(f"{ED}TELEGRAM ID SET     : {ID}")
 print(f"{P}BOT TOKEN SET       : {token[:10]}...")
 print('')
 print(f'''
-{N}[1] {Y}- {R}START CHECKING (2011 - 2014 ACCOUNTS)
+{N}[1] {Y}- {R}START CHECKING (2011 - 2014 ACCOUNTS) [AUTO-STARTED]
 ''')
-wr = int(input(f'{Y}SELECT OPTION : {N}'))
 
-if wr == 1:
-    pass
-
-os.system('cls' if os.name == 'nt' else 'clear')
+# تجاوزنا الانتظار اليدوي وخليناها تبدأ تلقائياً
+wr = 1
 
 yy = 'azertyuiopmlkjhgfdsqwxcvbn'
 ids = []
@@ -270,7 +249,6 @@ def Users():
     global Ex
     try:
         LsD = ''.join(random.choices(string.ascii_letters + string.digits, k=4))
-        # نطاق الآيديسترول الشامل لحسابات 2011 إلى 2014
         UseriD = str(random.randrange(180165130, 1682665388))
         
         variables = json.dumps({"id": UseriD, "render_surface": "PROFILE"})
