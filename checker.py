@@ -83,7 +83,7 @@ print(f"{ED}TELEGRAM ID SET     : {ID}")
 print(f"{P}BOT TOKEN SET       : {token[:10]}...")
 print('')
 print(f'''
-{N}[1] {Y}- {R}START CHECKING ACCOUNTS
+{N}[1] {Y}- {R}START CHECKING (2011 - 2014 ACCOUNTS)
 ''')
 wr = int(input(f'{Y}SELECT OPTION : {N}'))
 
@@ -199,7 +199,7 @@ def info(username, jj):
             rest = "Unknown"
 
         ff = f"""
-    New Hit IG Account!
+    New Hit IG Account! (2011-2014)
     ════════════════
     Username  : @{username}
     Name      : {name}
@@ -217,7 +217,7 @@ def info(username, jj):
         try: rest = Instagram.rest(username)
         except: rest = "Unknown"
         ff = f"""
-    New Hit IG Account!
+    New Hit IG Account! (2011-2014)
     ════════════════
     Username  : @{username}
     Email     : {username}@{jj}
@@ -270,7 +270,8 @@ def Users():
     global Ex
     try:
         LsD = ''.join(random.choices(string.ascii_letters + string.digits, k=4))
-        UseriD = str(random.randrange(iud, uid))
+        # نطاق الآيديسترول الشامل لحسابات 2011 إلى 2014
+        UseriD = str(random.randrange(180165130, 1682665388))
         
         variables = json.dumps({"id": UseriD, "render_surface": "PROFILE"})
         data = {"lsd": LsD, "variables": variables, "doc_id": "25618261841150840"}
@@ -284,32 +285,6 @@ def Users():
         return username
     except:
         return None
-
-print(f'''
-{G}[1] - 2011 ACCOUNTS
-[2] - 2012 ACCOUNTS
-[3] - 2013 ACCOUNTS
-[4] - 2014 ACCOUNTS
-[5] - 2015 ACCOUNTS
-[6] - 2016-2017 ACCOUNTS
-''')
-num = int(input(f'{Y}CHOOSE YEAR RANGE : {N}'))
-
-if num == 1:
-    uid, iud = 18957417, 10000
-elif num == 2:
-    uid, iud = 287924624, 18314009
-elif num == 3:
-    uid, iud = 461365132, 180165130
-elif num == 4:
-    uid, iud = 1682665388, 361365132
-elif num == 5:
-    uid, iud = 3382665388, 1682665388
-elif num == 6:
-    uid, iud = 8682665388, 2682665388
-else:
-    print("Invalid Selection.")
-    exit()
 
 def ExUsers():
     for _ in range(1000):  
